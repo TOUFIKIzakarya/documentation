@@ -25,7 +25,6 @@ This integration supports the following log types:
 - Engine Update Status
 - Pattern Update Status
 
-
 !!! warning
     This format is in beta
 
@@ -52,22 +51,22 @@ To enable syslog forwarding:
 5. Select `CEF` as the log format
 6. Configure the frequency of the log forwarding
 7. Select the log types to forward according to the list of supported log types:
-	- Application Control violations
-	- Attack Discovery detections
-	- Behavior Monitoring detections
-	- C&C Callback
-	- Content Violation
-	- Data Loss Prevention
-	- Device Control violations
-	- Suspicious File detections
-	- Network Content Inspection
-	- Virus/Malware detections
-	- Spyware/Grayware detections
-	- Predictive Machine Learning detections
-	- Virtual Analyzer detections
-	- Web Violation
-	- Engine Update Status
-	- Pattern Update Status
+ - Application Control violations
+ - Attack Discovery detections
+ - Behavior Monitoring detections
+ - C&C Callback
+ - Content Violation
+ - Data Loss Prevention
+ - Device Control violations
+ - Suspicious File detections
+ - Network Content Inspection
+ - Virus/Malware detections
+ - Spyware/Grayware detections
+ - Predictive Machine Learning detections
+ - Virtual Analyzer detections
+ - Web Violation
+ - Engine Update Status
+ - Pattern Update Status
 8. Click `Test Connection` to validate the configuration
 9. Click `Save`
 
@@ -77,7 +76,7 @@ Go to the [intake page](https://app.sekoia.io/operations/intakes) and create a n
 
 ## Forward logs to Sekoia.io
 
-Please consult the [Syslog Forwarding](/xdr/features/collect/ingestion_methods/syslog/sekoiaio_forwarder/) documentation to forward these logs to Sekoia.io.
+Please consult the [Syslog Forwarding](/integration/ingestion_methods/syslog/sekoiaio_forwarder/) documentation to forward these logs to Sekoia.io.
 
 ## Further Readings
 

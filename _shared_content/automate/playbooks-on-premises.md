@@ -1,12 +1,12 @@
 # Playbooks On-premises
 
-Our clients may find it necessary to execute Playbook actions within a local network that remains isolated from external internet access or rejects inbound connections. To meet this particular need, we enable users to select actions they want to perform on their local network directly from the Playbooks' user interface. 
+Our clients may find it necessary to execute Playbook actions within a local network that remains isolated from external internet access or rejects inbound connections. To meet this particular need, we enable users to select actions they want to perform on their local network directly from the Playbooks' user interface.
 
-Clients must undertake a short installation process to harness the full potential of this security-enhancing feature. This involves installing our [dedicated agent](https://docs.sekoia.io/xdr/features/collect/integrations/endpoint/sekoiaio/) and Docker onto a Linux machine within their local network. The meticulous setup ensures that Playbook actions can be executed with the utmost reliability and security, maintaining the integrity of the local network environment. 
+Clients must undertake a short installation process to harness the full potential of this security-enhancing feature. This involves installing our [dedicated agent](https://docs.sekoia.io/integration/integrations/endpoint/sekoiaio/) and Docker onto a Linux machine within their local network. The meticulous setup ensures that Playbook actions can be executed with the utmost reliability and security, maintaining the integrity of the local network environment.
 
 Below, we provide detailed instructions on how to accomplish the installation process.
 
-!!! warning 
+!!! warning
     The Playbook runner supports only action, not trigger, execution on-premises.
 
 !!! INFO
@@ -25,10 +25,10 @@ Below, we provide detailed instructions on how to accomplish the installation pr
 Playbooks On-prem are designed to support Linux distributions based on kernel version 3.10 or later.
 Here's a non-exhaustive list of supported distributions:
 
-* Ubuntu 14.04 and newer
-* Debian 8 and newer
-* CentOS 7 and newer
-* Redhat 7 and newer
+- Ubuntu 14.04 and newer
+- Debian 8 and newer
+- CentOS 7 and newer
+- Redhat 7 and newer
 
 ### Docker
 
@@ -36,25 +36,28 @@ Playbooks On-prem rely on `docker` to execute actions. For instructions on how t
 
 #### podman
 
-In certain Linux distributions, such as RHEL and CentOS, podman may come pre-installed, potentially preventing `docker`from working correctly. 
+In certain Linux distributions, such as RHEL and CentOS, podman may come pre-installed, potentially preventing `docker`from working correctly.
 
 Plus, podman can also inadvertently intercept and execute docker commands if the `podman-docker` package is installed.
 
-Because of this, the playbook runner agent **requires the presence of both the Docker client and the Docker engine**. 
+Because of this, the playbook runner agent **requires the presence of both the Docker client and the Docker engine**.
 
 To uninstall `podman` and resolve any compatibility issues, follow the instructions below:
 
-1. Remove packages 
+1. Remove packages
+
     ```
     sudo yum remove buildah skopeo podman containers-common atomic-registries docker container-tools
     ```
 
 2. Remove any left-over artifacts and files
+
     ```
     sudo rm -rf /etc/containers/* /var/lib/containers/* /etc/docker /etc/subuid* /etc/subgid*
     ```
 
-3. Delete any associated container storage 
+3. Delete any associated container storage
+
     ```
     cd ~ && rm -rf /.local/share/containers/
     ```
@@ -64,17 +67,17 @@ To uninstall `podman` and resolve any compatibility issues, follow the instructi
 To ensure a bug-free installation, the Sekoia Endpoint Agent must be able to communicate with several external domains:
 
 - To pull module images:
-    - ghcr.io
-    - githubusercontent.com
-    
-- To send execution results and store files:
-    - sekoia.io
-    - app.sekoia.io
-    - api.sekoia.io
-    - minio-symphony.prod.sekoia.io
-    - ...
+  - ghcr.io
+  - githubusercontent.com
 
-### Testing the prerequisites 
+- To send execution results and store files:
+  - sekoia.io
+  - app.sekoia.io
+  - api.sekoia.io
+  - minio-symphony.prod.sekoia.io
+  - ...
+
+### Testing the prerequisites
 
 We've prepared a Docker image to facilitate the validation process and ensure the environment is properly configured for agent installation.
 
@@ -102,15 +105,14 @@ Checking connectivity with the object storage ... OK
     * The region: `-e region=mco1`
     * Proxy information: `-e https_proxy={proxy_url}`
 
+## Playbook runners
 
-## Playbook runners 
-
-A playbook runner is a local relay that launches playbook actions on a local network. 
-It can be used with any action in Sekoia.io playbooks. 
+A playbook runner is a local relay that launches playbook actions on a local network.
+It can be used with any action in Sekoia.io playbooks.
 
 ### Create a playbook runner
 
-To create a playbook runner, follow these steps: 
+To create a playbook runner, follow these steps:
 
 1. On the playbooks listing page, select the `Playbook runners` button in the upper-right corner
     ![create playbook runner](/assets/playbooks/create_runner.png){: style="max-width:100%"}
@@ -129,18 +131,18 @@ Your newly created playbook runner should now appear in the list. It will also b
 
  ![playbook runner instructions](/assets/playbooks/playbook_runner_action_on_premise.png){: align="right", width="280"}
 
-Playbook runners can be used in any action in the playbook catalog. You can add them in the configuration panel that is shown when selecting an action in the playbook. 
+Playbook runners can be used in any action in the playbook catalog. You can add them in the configuration panel that is shown when selecting an action in the playbook.
 
-To use a playbook runner for a specific action, follow these steps: 
+To use a playbook runner for a specific action, follow these steps:
 
 1. Go to a playbook and select the action that should be executed on-premises
 2. Open the configuration sidebar for this action and change "How to execute this action" to "On-premises"
 3. In the "Which playbook runner" section, select the runner you want to use to execute this action
-4. After selecting the playbook runner and completing the configuration, save the playbook 
+4. After selecting the playbook runner and completing the configuration, save the playbook
 
 ## Proxy support
 
-The playbook runner can use a proxy server when executing actions if needed. 
+The playbook runner can use a proxy server when executing actions if needed.
 
 If you want to enable this feature, edit the configuration file at `/etc/endpoint-agent/config.yaml` and add the following line:
 
@@ -174,14 +176,14 @@ To avoid errors during the TLS certificate validation step, specify the path to 
 
 To enable this feature, follow these steps:
 
-1.  Edit the configuration file at `/etc/endpoint-agent/config.yaml` and add the following line:
+1. Edit the configuration file at `/etc/endpoint-agent/config.yaml` and add the following line:
+
     ```yaml
     CABundlePath: "path/to/bundle/cacert.pem"
     ```
 
     !!! tip
         The bundle must contain trusted CA certificates authorized to communicate with Sekoia.io.
-
 
     ??? example "Bundle format example"
 
@@ -253,6 +255,7 @@ To enable this feature, follow these steps:
         ```
 
 2. Once the configuration is changed, restart the agent by running the following command:
+
     ```bash
     sudo systemctl restart SEKOIAEndpointAgent.service
     ```

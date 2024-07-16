@@ -3,6 +3,7 @@ name: Forcepoint Secure Web Gateway
 type: intake
 
 ## Overview
+
 Forcepoint Secure Web Gateway (SWG) is a proxy, installed on the endpoint, applying routing policies and analyzing the traffic against threats.
 This product is supported by Forcepoint LLC.
 
@@ -22,8 +23,7 @@ This procedure should be repeated for each Forcepoint Policy Server.
 
 ### Prerequisites
 
-An internal syslog concentrator is required to collect and forward events to Sekoia.io. We highly recommand you to use the [Sekoia.io Forwarder](/xdr/features/collect/ingestion_methods/syslog/sekoiaio_forwarder/).
-
+An internal syslog concentrator is required to collect and forward events to Sekoia.io. We highly recommand you to use the [Sekoia.io Forwarder](/integration/ingestion_methods/syslog/sekoiaio_forwarder/).
 
 ### Enable SIEM Integration
 
@@ -36,7 +36,6 @@ Select the `syslog/CEF` as SIEM format. Click `OK` then `Save and Deploy` to ena
 ## Create the intake
 
 Go to the [intake page](https://app.sekoia.io/operations/intakes) and create a new intake from the format Forcepoint Secure Web Gateway.
-
 
 ## Forward logs to Sekoia.io
 

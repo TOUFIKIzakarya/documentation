@@ -6,7 +6,7 @@ The [Events page](https://app.sekoia.io/operations/events) exposes a search capa
 
 ### Fields
 
-The Tables below detail the main fields that can be used to narrow down your search. Events are normalized to use the [Elastic Common Schema (ECS) Reference](https://www.elastic.co/guide/en/ecs/master/index.html). Custom fields can also be used and are listed in the [Integrations section](https://docs.sekoia.io/xdr/features/collect/integrations/).
+The Tables below detail the main fields that can be used to narrow down your search. Events are normalized to use the [Elastic Common Schema (ECS) Reference](https://www.elastic.co/guide/en/ecs/master/index.html). Custom fields can also be used and are listed in the [Integrations section](https://docs.sekoia.io/integration/integrations/).
 
 #### Action
 
@@ -33,7 +33,6 @@ The Tables below detail the main fields that can be used to narrow down your sea
 | ----------------- | ------ | ------------------------------------------------------------------- |
 | network.protocol  | string | L7 Network protocol name. ex. http, lumberjack, transport protocol. |
 | network.transport | string | Protocol Name corresponding to the field `iana_number`.             |
-
 
 #### Destination
 
@@ -101,7 +100,6 @@ The Tables below detail the main fields that can be used to narrow down your sea
 | process.ppid              | number | Parent process' pid.                        |
 | process.parent.name       | string | Parent process' name                        |
 | process.parent.executable | string | Parent process' executable                  |
-
 
 ### Example
 

@@ -16,13 +16,13 @@ Our extensive catalog of over 900 rules, each [associated with a TTP from the MI
 
 - **Activate a new wave of higher effort level rules** after the initial RUN period, representing:
 
-    - 20% of level 3 / "Advanced" rules,
-    - 10% of level 4 / "Master" rules.
+  - 20% of level 3 / "Advanced" rules,
+  - 10% of level 4 / "Master" rules.
 
 - **Aim for continuous improvement**, reaching an average of:
 
-    -  10% tuning for level 3 rules with at least 1 alert-filter,
-    -  20% tuning for level 4 rules with at least 1 alert-filter.
+  - 10% tuning for level 3 rules with at least 1 alert-filter,
+  - 20% tuning for level 4 rules with at least 1 alert-filter.
 
 ### Intakes Configuration
 
@@ -33,11 +33,10 @@ To ensure comprehensive and effective coverage, it is crucial to configure your 
 - **2 company wide Network Based Intake** (e.g., Loadbalancer/Reverse-Proxy, Proxy, DNS). They help monitor internal network traffic and detect anomalies such as lateral movements by attackers and suspicious communications.
 - **1 company wide Email Security Based Intake** (e.g., Office, ProofPoint, Vade) **with security options enabled**. This helps identify phishing attacks, malware transmitted via email, and other email-related threats.
 - **1 Identity and Access Management Based Intake** for **on-premise** environments (e.g., Active Directory, Okta, Wallix) **and 1 for cloud** environments if applicable (e.g., Azure Entra ID, Cloudflare Access Requests, Google Workspace). This helps detect suspicious activities related to user access, such as unauthorized login attempts and privilege changes, and ensures security oversight across both on-premise and cloud environments.
-- **Activity Logs**: Ensure that [Sekoia.io activity logs](https://docs.sekoia.io/xdr/features/collect/integrations/application/sekoiaio_activity_logs/) are activated. This allows monitoring actions and changes within the Sekoia.io platform itself, ensuring complete transparency and traceability.
+- **Activity Logs**: Ensure that [Sekoia.io activity logs](https://docs.sekoia.io/integration/integrations/application/sekoiaio_activity_logs/) are activated. This allows monitoring actions and changes within the Sekoia.io platform itself, ensuring complete transparency and traceability.
 - **No intake should have zero events received** in the past 7 days. An intake without events can indicate a configuration or data collection issue, compromising threat detection capability. Ensure that notifications are configured to alert in the case of [an event drop for an intake](https://docs.sekoia.io/getting_started/notifications-Examples/#intakes).
 
-- **Use the [Sekoia.io Forwarder](https://docs.sekoia.io/xdr/features/collect/ingestion_methods/syslog/sekoiaio_forwarder/)** each time you need to forward On Premise events via syslog protocol to Sekoia.io SOC Platform to ease discriminate logs before adding them the relevant Intake Key. It also is the only log forwarder that our Support team will be able to provide you with assistance.
-
+- **Use the [Sekoia.io Forwarder](https://docs.sekoia.io/integration/ingestion_methods/syslog/sekoiaio_forwarder/)** each time you need to forward On Premise events via syslog protocol to Sekoia.io SOC Platform to ease discriminate logs before adding them the relevant Intake Key. It also is the only log forwarder that our Support team will be able to provide you with assistance.
 
 ### Events Quality
 
@@ -66,9 +65,9 @@ Playbooks complement operational optimization by automating various types of man
 
 - **Keep the number of playbook executions per day low**: Aim for less than 60 executions per playbook per day, aligning with the number of raised alerts. Each playbook should have a specific objective to meet a particular need.
 - **Design playbooks with simplicity in mind**: On average, each playbook should be composed of less than 15 modules, including:
-    - **1 [Trigger](https://docs.sekoia.io/xdr/features/automate/triggers/)** such as the “Manual trigger” or “Alert created” trigger **with a filter condition** to start the playbook only for relevant cases.
-    - **Some [Operator](https://docs.sekoia.io/xdr/features/automate/operators/) modules** like "[Condition](https://docs.sekoia.io/xdr/features/automate/operators/#condition)" and "[Foreach](https://docs.sekoia.io/xdr/features/automate/operators/#foreach)" to halt the playbook execution if new information gathered during the process indicates that the playbook is unnecessary in the current context.
-    - **A majority of [Action](https://docs.sekoia.io/xdr/features/automate/actions/) modules** making it easily understandable for new team members and maintainable over time. To give you more details on the top 10 most used playbook Actions, here is a list:
+  - **1 [Trigger](https://docs.sekoia.io/xdr/features/automate/triggers/)** such as the “Manual trigger” or “Alert created” trigger **with a filter condition** to start the playbook only for relevant cases.
+  - **Some [Operator](https://docs.sekoia.io/xdr/features/automate/operators/) modules** like "[Condition](https://docs.sekoia.io/xdr/features/automate/operators/#condition)" and "[Foreach](https://docs.sekoia.io/xdr/features/automate/operators/#foreach)" to halt the playbook execution if new information gathered during the process indicates that the playbook is unnecessary in the current context.
+  - **A majority of [Action](https://docs.sekoia.io/xdr/features/automate/actions/) modules** making it easily understandable for new team members and maintainable over time. To give you more details on the top 10 most used playbook Actions, here is a list:
 
         1. [Read JSON File](https://docs.sekoia.io/xdr/features/automate/library/fileutils/#read-json-file)
         2. [Comment Alert](https://docs.sekoia.io/xdr/features/automate/library/sekoia-io/#comment-alert)
