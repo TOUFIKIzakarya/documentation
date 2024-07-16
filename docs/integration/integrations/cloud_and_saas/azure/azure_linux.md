@@ -21,3 +21,4 @@ Azure Virtual Machines service is developed and managed by Microsoft Corp.
     - [Sophos EDR](/integration/integrations/endpoint/sophos_edr)
     - [Tehtris](/integration/integrations/endpoint/tehtris_edr)
     - [Trend Micro Deep Security](/integration/integrations/endpoint/trend_micro_deep_security)
+

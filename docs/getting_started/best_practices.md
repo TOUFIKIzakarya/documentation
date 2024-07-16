@@ -38,6 +38,7 @@ To ensure comprehensive and effective coverage, it is crucial to configure your 
 
 - **Use the [Sekoia.io Forwarder](https://docs.sekoia.io/integration/ingestion_methods/syslog/sekoiaio_forwarder/)** each time you need to forward On Premise events via syslog protocol to Sekoia.io SOC Platform to ease discriminate logs before adding them the relevant Intake Key. It also is the only log forwarder that our Support team will be able to provide you with assistance.
 
+
 ### Events Quality
 
 The quality of events is crucial for accurate and effective detection. Here are the best practices to follow:

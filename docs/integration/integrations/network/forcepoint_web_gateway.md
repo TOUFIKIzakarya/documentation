@@ -25,6 +25,7 @@ This procedure should be repeated for each Forcepoint Policy Server.
 
 An internal syslog concentrator is required to collect and forward events to Sekoia.io. We highly recommand you to use the [Sekoia.io Forwarder](/integration/ingestion_methods/syslog/sekoiaio_forwarder/).
 
+
 ### Enable SIEM Integration
 
 Log on the Web Security module of the Forcepoint Security Manager and navigate to `Settings > General > SIEM Integration`.

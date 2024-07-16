@@ -67,14 +67,12 @@ Redirecting...
                 )
                 new_files.append(newfile)
 
-        new_files.append(
-            File(
-                path="integration/integrations/index.md",
-                src_dir="operation_center/integration_catalog/",
-                dest_dir=config["site_dir"],
-                use_directory_urls=True,
-            )
-        )
+        new_files.append(File(
+            path="integration/integrations/index.md",
+            src_dir="operation_center/integration_catalog/",
+            dest_dir=config["site_dir"],
+            use_directory_urls=True,
+        ))
         files._files += new_files
 
     def on_page_read_source(self, page, config):

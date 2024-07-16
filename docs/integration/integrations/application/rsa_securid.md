@@ -35,6 +35,7 @@ Go to the [intake page](https://app.sekoia.io/operations/intakes) and create a n
 
 Please consult the [Sekoia Forwarder](/integration/ingestion_methods/syslog/sekoiaio_forwarder) documentation to forward these logs to Sekoia.io.
 
+
 ## Further Readings
 
 - [How to configure RSA Authentication Manager to send log messages to a local file for an audit trail](https://community.rsa.com/t5/securid-knowledge-base/how-to-configure-rsa-authentication-manager-to-send-log-messages/ta-p/6449)

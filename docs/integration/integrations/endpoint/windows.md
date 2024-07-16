@@ -19,7 +19,7 @@ Additionally, this documentation will offer guidance on collecting and forwardin
 
 !!! Warning
     Please be advised that collecting Windows events with NXLog on certain Windows languages that contain accents (such as French for "Système" keyword), are not correctly encoded by NXLog and results in an error of interpreation on our product. In such case, please consider the installation of our [agent](https://docs.sekoia.io/integration/integrations/endpoint/sekoiaio/) on the supported OS).
-
+    
 ## Windows Event logs
 
 On Microsoft Windows workstations and servers, most of the important hardward and software activities that are relevant for security detection and analysis, are logged into three files:
@@ -195,7 +195,7 @@ To get started, follow these steps:
     For more information, consult [NXLog documentation.](https://docs.nxlog.co/refman/current/xm/syslog.html)
 
 !!! Note
-    The iso8859-1 character encoding is limited to 256 characters, which is not enough to represent all French characters. This means that some French characters might not be correctly interpreted or displayed when using iso8859-1 encoding. For example, iso8859-1 does not include characters such as é, è, ê, and ë.
+    The iso8859-1 character encoding is limited to 256 characters, which is not enough to represent all French characters. This means that some French characters might not be correctly interpreted or displayed when using iso8859-1 encoding. For example, iso8859-1 does not include characters such as é, è, ê, and ë. 
     In order to correctly represent these characters, it is recommended to install the [Sekoia.io agent](https://docs.sekoia.io/integration/integrations/endpoint/sekoiaio/). This endpoint agent is specifically designed to handle such issues, ensuring the accurate and secure transmission of data.
 
 Restart the NXLog service through the Services tool as Administrator or use this Powershell command line as admin:
