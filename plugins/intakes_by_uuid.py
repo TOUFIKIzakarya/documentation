@@ -45,7 +45,7 @@ Redirecting...
             with filename.open() as f:
                 _, metadata = get_data(f.read())
 
-                if "uuid" not in metadata or metadata.get("type").lower() !=  "intake":
+                if "uuid" not in metadata or metadata.get("type").lower() != "intake":
                     continue
 
                 dialect_uuid = metadata["uuid"]
@@ -67,12 +67,14 @@ Redirecting...
                 )
                 new_files.append(newfile)
 
-        new_files.append(File(
-            path="xdr/features/collect/integrations/index.md",
-            src_dir="operation_center/integration_catalog/",
-            dest_dir=config["site_dir"],
-            use_directory_urls=True,
-        ))
+        new_files.append(
+            File(
+                path="integration/integrations/index.md",
+                src_dir="operation_center/integration_catalog/",
+                dest_dir=config["site_dir"],
+                use_directory_urls=True,
+            )
+        )
         files._files += new_files
 
     def on_page_read_source(self, page, config):
@@ -82,7 +84,7 @@ Redirecting...
                     destination=self._redirection_table[page.file.name]
                 )
 
-        if page.file.src_path == "xdr/features/collect/integrations/index.md":
+        if page.file.src_path == "integration/integrations/index.md":
             filename = Path(config["docs_dir"]) / Path(page.file.src_path)
             content = filename.open().read()
 

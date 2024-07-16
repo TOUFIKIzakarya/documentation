@@ -27,15 +27,13 @@ In the Security Console of the RSA Authentication Manager:
 5. In the section `Log Data Retention`, for each log data, select `Save to internal database and remote Syslog at the following hostname or IP address`, then type the location of the log concentration.
 6. Click `Save`
 
-
 ## Create the intake
 
 Go to the [intake page](https://app.sekoia.io/operations/intakes) and create a new intake from the format `RSA SecurID`.
 
 ## Forward logs to Sekoia.io
 
-Please consult the [Sekoia Forwarder](/xdr/features/collect/ingestion_methods/syslog/sekoiaio_forwarder) documentation to forward these logs to Sekoia.io.
-
+Please consult the [Sekoia Forwarder](/integration/ingestion_methods/syslog/sekoiaio_forwarder) documentation to forward these logs to Sekoia.io.
 
 ## Further Readings
 

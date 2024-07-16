@@ -8,10 +8,10 @@ In this documentation, we will dive into the different parts that constitute the
 - The [Search bar](#search-bar) and its filtering and sharing options
 - The [list of events](#log-listing) and the detailed view of your parsed events
 - The mechanism behind [events enrichment](#events-enrichment) or how events are contextualized in Sekoia.io
-- The [aggregation](#aggregation) feature and how to create an [anomaly detection rule](#Create-Anomaly-Detection-rule-from-the-aggregation-view) from your query
+- The [aggregation](#aggregation) feature and how to create an [anomaly detection rule](#create-anomaly-detection-rule-from-the-aggregation-view) from your query
 
 !!! note
-    To send your logs to Sekoia.io, please refer to this [section](https://docs.sekoia.io/xdr/features/collect/ingestion_methods/).
+    To send your logs to Sekoia.io, please refer to this [section](https://docs.sekoia.io/integration/ingestion_methods/).
 
 ## Search bar
 
@@ -44,14 +44,13 @@ You can also add filters manually by clicking on the "Add Filter" icon below the
 | `<` | The field must be less than the specified number. *Only for numerical fields* |
 | `<=` | The field must be less than or equal to the specified number. *Only for numerical fields* |
 
-
 ![event-filter](/assets/operation_center/events/events-filters.png){ align=right }
 
 Each filter is added as a badge below the `Search Bar`. A filter can be removed by clicking on the `X` at the end of the badge. You can also click on a filter to access a menu that will allow you to:
 
-* Edit the filter
-* Invert the filter (filtering out instead of filtering for, or vice versa)
-* Temporarily disable or re-enable a filter
+- Edit the filter
+- Invert the filter (filtering out instead of filtering for, or vice versa)
+- Temporarily disable or re-enable a filter
 
 To clear current filters, you can use the `Clear all` button at the end of the filters.
 
@@ -82,7 +81,6 @@ Click on the `Apply` button to start your search based on these filters.
 
 ### Search history
 
-
 Each events search performed is listed in the `Search History` for 30 days. You can use the search history to easily access past search results.
 
 It is accessible by clicking on the following button (a panel will be displayed with the previous searches)
@@ -104,8 +102,8 @@ Search Results can be shared with your colleagues by sending them the unique sea
 
 To obtain the search URL, you can:
 
-* Click on the `Share / Link` icon inside the `Search History` panel
-* Copy the active URL from the browser address bar
+- Click on the `Share / Link` icon inside the `Search History` panel
+- Copy the active URL from the browser address bar
 
 ### Histogram
 
@@ -155,7 +153,6 @@ Each line of log can be unrolled to show:
 
 ![line-details](/assets/operation_center/events/log-details.png){ align=right }
 
-
 - `STIX`: Event as a STIX bundle that will be used by detection engines
 - `Raw event`: Event as received by Sekoia.io
 - `Detail`: Detailed information retrieved from the log after parsing with elements from the event related to the intake and the community.
@@ -186,7 +183,6 @@ To add an event to a case:
 After adding an event to a case, you will notice that the selected case becomes active and appears at the top of the events table. Step 2 is no longer necessary: you can now add (or remove) an event to a case with a single click.
 
 To deselect the active case, click on the `X` next to its name.
-
 
 ### Export the results of a search
 
@@ -238,7 +234,6 @@ To see the value of enriched values, click on the enriched field and you'll be p
 !!! note
     If the value exists in the Intelligence Center, tags associated with the value in question will be added as additional context.
 
-
 ## Aggregation
 
 Aggregation is a new (beta) feature on Sekoia.io!
@@ -259,7 +254,6 @@ To compute aggregations on a list of events, you’ll have to:
 
 !!! note
     Aggregation view feature does not support the field `alert_short_ids`.
-
 
 ### Aggregation methods
 

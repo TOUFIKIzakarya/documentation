@@ -2,7 +2,6 @@
 
 ## Introduction
 
-
 Following the creation of a new community, which represents your instance that is provided to you with the licence, there is a set of standard configurations on Sekoia.io Operations Center pages that needs to be completed. This note summarises a guidance on the primary steps to be taken in the first few minutes of setting up a community.
 
 The full guide on how to create and set up an account, create and invite users to a community, manage roles, permissions and notifications and much more, is available [here](https://docs.sekoia.io/getting_started/).
@@ -25,10 +24,10 @@ The Intakes correspond to the different technologies used (also called Data Sour
 To create intakes associated to the technology you would like to collect:
 
 1. Go to the Intakes page and create intakes one by one from the catalog.
-2. Make sure the logs are pushed to Sekoia.io using [syslog](https://docs.sekoia.io/xdr/features/collect/ingestion_methods/syslog/overview/) or [HTTPS](https://docs.sekoia.io/xdr/features/collect/ingestion_methods/https/overview/) protocols providing the `Intake key` accordingly, or pulled by API.
+2. Make sure the logs are pushed to Sekoia.io using [syslog](https://docs.sekoia.io/integration/ingestion_methods/syslog/overview/) or [HTTPS](https://docs.sekoia.io/integration/ingestion_methods/https/overview/) protocols providing the `Intake key` accordingly, or pulled by API.
 
 !!! note
-    Find more details on each integration in our [integrations catalog](https://docs.sekoia.io/xdr/features/collect/integrations/).
+    Find more details on each integration in our [integrations catalog](https://docs.sekoia.io/integration/integrations/).
 
 ![intakes](/assets/operation_center/quick_start/intakes.png){: style="max-width:100%"}
 

@@ -2,7 +2,6 @@ uuid: 890207d2-4878-440d-9079-3dd25d472e0a
 name: ManageEngine ADAudit Plus
 type: intake
 
-
 ## Overview
 
 ManageEngine ADAudit Plus is a robust Active Directory auditing and compliance solution, empowering organizations to track and monitor changes, detect security threats, and ensure regulatory compliance within their Active Directory environment.
@@ -16,7 +15,6 @@ This integration supports the following events from ADAudit Plus:
 - User managements reports (`UserMgmtReports`)
 - Logon reports (`LogonReports`)
 - Audit reports (`DNSAuditReports` and `ADObjectsAuditReports`)
-
 
 ## Configure
 
@@ -36,15 +34,13 @@ In the ADAudit Plus console:
 6. Save the configuration
 7. After saving this configuration, Choose the categories to forward.
 
-
 ## Create the intake
 
 Go to the [intake page](https://app.sekoia.io/operations/intakes) and create a new intake from the format `ManageEngine ADAuditPlus`.
 
 ## Forward logs to Sekoia.io
 
-Please consult the [Syslog Forwarding](/xdr/features/collect/ingestion_methods/syslog/sekoiaio_forwarder/) documentation to forward these logs to Sekoia.io.
-
+Please consult the [Syslog Forwarding](/integration/ingestion_methods/syslog/sekoiaio_forwarder/) documentation to forward these logs to Sekoia.io.
 
 {!_shared_content/operations_center/detection/generated/suggested_rules_890207d2-4878-440d-9079-3dd25d472e0a_do_not_edit_manually.md!}
 

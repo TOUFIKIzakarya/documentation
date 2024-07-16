@@ -3,6 +3,7 @@ name: Microsoft IIS
 type: intake
 
 ## Overview
+
 Microsoft Internet Information Services (IIS) is a web server software for Windows, providing a secure and scalable platform for hosting and managing websites, applications, and services, widely used in enterprise environments.
 
 {!_shared_content/operations_center/detection/generated/suggested_rules_63974ce1-2f0a-44f7-a4cf-3e64787c1c39_do_not_edit_manually.md!}
@@ -97,19 +98,18 @@ To enable the connection between your events forwarder and the [Sekoia.io](http:
 
 1. Open a PowerShell console as an administrator.
 2. Use the following command to retrieve the certificate and save it to the appropriate directory:
-    
+
     ```powershell
      Invoke-WebRequest -Uri <https://app.sekoia.io/assets/files/SEKOIA-IO-intake.pem> -OutFile 'C:\\Program Files\\nxlog\\cert\\Sekoia.io-intake.pem'
     
     ```
-    
+
 3. Restart the NXLog service through the Services tool as an administrator or use the following PowerShell command line as an administrator:
-    
+
     ```powershell
     Restart-Service nxlog
     
     ```
-    
 
 After completing these steps, your events forwarder should be able to establish a secure connection with the [Sekoia.io](http://sekoia.io/) intake using the newly downloaded certificate.
 
@@ -178,7 +178,7 @@ To get started, follow these steps:
 
 !!! Note
     The iso8859-1 character encoding is limited to 256 characters, which is not enough to represent all French characters. This means that some French characters might not be correctly interpreted or displayed when using iso8859-1 encoding. For example, iso8859-1 does not include characters such as é, è, ê, and ë.
-    In order to correctly represent these characters, it is recommended to install the [Sekoia.io agent](https://docs.sekoia.io/xdr/features/collect/integrations/endpoint/sekoiaio/). This endpoint agent is specifically designed to handle such issues, ensuring the accurate and secure transmission of data.
+    In order to correctly represent these characters, it is recommended to install the [Sekoia.io agent](https://docs.sekoia.io/integration/integrations/endpoint/sekoiaio/). This endpoint agent is specifically designed to handle such issues, ensuring the accurate and secure transmission of data.
 
 Restart the NXLog service through the Services tool as Administrator or use this Powershell command line as admin:
 
